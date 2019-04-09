@@ -31,89 +31,30 @@ public class Buku {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+
+	@Column(name = "book_title")
 	private String titleBook;
-	
+
+	@Column(name = "first_name_creator")
 	private String namaDepanPengarang;
-	
+
+	@Column(name = "last_name_creator")
 	private String namaBelakangPengarang;
-	
+
+	@Column(name = "status")
 	private int statusPeminjaman;
-	
+
+	@Column(name = "name")
 	private String namaPeminjam;
 	
-	@Column(nullable=false, updatable=false)
+	@Column(name = "created_date", nullable=false, updatable=false)
 	@Temporal(TemporalType.TIMESTAMP)
 	@CreatedDate
 	private Date createdAt;
 	
-	@Column(nullable=false)
+	@Column(name = "modified_date", nullable=false)
 	@Temporal(TemporalType.TIMESTAMP)
 	@LastModifiedDate
 	private Date updateAt;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getTitleBook() {
-		return titleBook;
-	}
-
-	public void setTitleBook(String titleBook) {
-		this.titleBook = titleBook;
-	}
-
-	public String getNamaDepanPengarang() {
-		return namaDepanPengarang;
-	}
-
-	public void setNamaDepanPengarang(String namaDepanPengarang) {
-		this.namaDepanPengarang = namaDepanPengarang;
-	}
-
-	public String getNamaBelakangPengarang() {
-		return namaBelakangPengarang;
-	}
-
-	public void setNamaBelakangPengarang(String namaBelakangPengarang) {
-		this.namaBelakangPengarang = namaBelakangPengarang;
-	}
-
-	public int getStatusPeminjaman() {
-		return statusPeminjaman;
-	}
-
-	public void setStatusPeminjaman(int statusPeminjaman) {
-		this.statusPeminjaman = statusPeminjaman;
-	}
-
-	public String getNamaPeminjam() {
-		return namaPeminjam;
-	}
-
-	public void setNamaPeminjam(String namaPeminjam) {
-		this.namaPeminjam = namaPeminjam;
-	}
-
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	public Date getUpdateAt() {
-		return updateAt;
-	}
-
-	public void setUpdateAt(Date updateAt) {
-		this.updateAt = updateAt;
-	}
 
 }
